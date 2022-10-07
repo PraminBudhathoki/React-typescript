@@ -4,6 +4,7 @@
 interface ChannelProps {
   channelName: string;
   playlistCount: number;
+  noofsubscription?: number;
 }
 function ChannelInfo(props: ChannelProps) {
   return (
