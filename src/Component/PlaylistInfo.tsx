@@ -6,11 +6,13 @@ interface PlaylistInfoProps {
     golang: number;
     react: number;
   };
+  username: "Dr.Vipin classes" | "Dr.Vipin Teotia" | "Guest";
 }
 
 const PlaylistInfo = (props: PlaylistInfoProps) => {
   return (
     <div className="text-start">
+      <h2>Welcome {props.username}</h2>
       <h2>We have playlist on followiing languages</h2>
       <ol>
         {props.lang.map((l) => (

@@ -14,7 +14,11 @@ function App() {
   return (
     <div className="App">
       <ChannelInfo channelName="Dr.Vipin Classes" playlistCount={40} />
-      <PlaylistInfo lang={lang} videos={numberofVideos} />
+      <PlaylistInfo
+        username="Dr.Vipin classes"
+        lang={lang}
+        videos={numberofVideos}
+      />
     </div>
   );
 }
