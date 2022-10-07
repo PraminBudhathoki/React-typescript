@@ -1,5 +1,11 @@
 interface PlaylistInfoProps {
   lang: string[];
+  videos: {
+    java: number;
+    kotlin: number;
+    golang: number;
+    react: number;
+  };
 }
 
 const PlaylistInfo = (props: PlaylistInfoProps) => {
@@ -10,6 +16,14 @@ const PlaylistInfo = (props: PlaylistInfoProps) => {
         {props.lang.map((l) => (
           <li key={l}>{l}</li>
         ))}
+      </ol>
+      <h2>We have a number of videos on following languages:</h2>
+
+      <ol>
+        <li>on Java:{props.videos.java}</li>
+        <li>on Kotlin:{props.videos.kotlin}</li>
+        <li>on GOlang:{props.videos.golang}</li>
+        <li>on React:{props.videos.react}</li>
       </ol>
     </div>
   );
