@@ -1,26 +1,17 @@
 import React from "react";
 import "./App.css";
-import ChannelInfo from "./Component/ChannelInfo";
-import PlaylistInfo from "./Component/PlaylistInfo";
-
+import Message from "./Component/Message";
 function App() {
-  const lang = ["Java", "Kotlin", "Golang", "React"];
-  const numberofVideos = {
-    java: 100,
-    kotlin: 200,
-    golang: 150,
-    react: 150,
+  const message = (event: React.MouseEvent<HTMLButtonElement>, id: number) => {
+    console.log("Welcome to React with Typescript", id);
   };
   return (
-    <div className="App">
-      <ChannelInfo channelName="Dr.Vipin Classes" playlistCount={40} />
-      <PlaylistInfo
-        username="Dr.Vipin classes"
-        lang={lang}
-        videos={numberofVideos}
-      />
+    <div>
+      <Message onMessage={message} />
+      <button onClick={(event) => message(event, 10)}>
+        Show Message from App
+      </button>
     </div>
   );
 }
-
 export default App;
